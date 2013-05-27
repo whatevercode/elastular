@@ -1,0 +1,35 @@
+{
+  "name": "angular-ui-ace",
+  "version": "0.0.3",
+  "description": "This directive allows you to add ACE editor elements.",
+  "author": {
+    "name": "https://github.com/angular-ui/ui-ace/graphs/contributors"
+  },
+  "license": "MIT",
+  "homepage": "http://angular-ui.github.com",
+  "main": "./ui-ace.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components",
+    "test*",
+    "demo*",
+    "gruntFile.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "angular": "~1.0.4",
+    "ace-builds": "~1.0.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.x"
+  },
+  "gitHead": "5e806661a4b42dba444e8c8d52150ac93f066aa1",
+  "readme": "# ui-ace directive [![Build Status](https://travis-ci.org/angular-ui/ui-ace.png)](https://travis-ci.org/angular-ui/ui-ace)\n\nThis directive allows you to add [ACE](http://ajaxorg.github.io/ace/) editor elements.\n\n# Requirements\n\n- AngularJS\n- [Ace 2.x](https://github.com/ajaxorg/ace/)\n\n# Testing\n\nWe use karma (the new testacular) and jshint to ensure the quality of the code.  The easiest way to run these checks is to use grunt:\n\n```sh\nnpm install -g grunt-cli\nnpm install\nbower install\ngrunt\n```\n\nThe karma task will try to open Firefox as a browser in which to run the tests.  Make sure this is available or change the configuration in `test\\karma.conf.js`\n\n# Usage\n\nWe use [bower](http://twitter.github.com/bower/) for dependency management.  Add\n\n```json\ndependencies: {\n\"angular-ui-ace\": \"latest\"\n}\n```\n\nTo your `components.json` file. Then run\n\n```sh\nbower install\n```\n\nThis will copy the _ui-ace_ files into your `components` folder, along with its dependencies. Load the script files in your application:\n\n```html\n<script type=\"text/javascript\" src=\"components/ace-builds/src-min-noconflict/ace.js\"></script>\n<script type=\"text/javascript\" src=\"components/angular/angular.js\"></script>\n<script type=\"text/javascript\" src=\"components/angular-ui-ace/ui-ace.js\"></script>\n```\n\nAdd the Ace module as a dependency to your application module:\n\n```javascript\nvar myAppModule = angular.module('MyApp', ['ui.ace']);\n```\n\nApply the directive to your form elements:\n\n```html\n<div ui-ace></div>\n```\n\nTo see something it's better to add some CSS, like\n\n\n```css\n.ace_editor { top: 0; bottom: 0; right: 0; left: 0; }\n```\n\nNote: the _ui-ace_ directive is wrapped in a `div.ace_editor_wrapper`.\nThus you can use Ace as a block like so :\n\n\n```css\n.ace_editor_wrapper { position : relative; height: 200px}\n```\n\n## Options\n\nAce doesn't provide a one gate access to all the options the jquery way.\nEach option is configured with the function of a specific instance.\nSee the [api doc](http://ajaxorg.github.io/ace/#nav=api) for more.\n\nAlthough, _ui-ace_ automatically handles some handy options :\n + _showGutter_ : to show the gutter or not.\n + _useWrapMode_ : to set whether or not line wrapping is enabled.\n + _theme_ : to set the thme to use.\n + _mode_ : to set the mode to use.\n\n```html\n<div ui-ace=\"{\n  useWrapMode : true,\n  showGutter: false,\n  theme:'twilight',\n  mode: 'xml'\n}\"></div>\n```\n\nTo handle other options you'll have to use a direct access to the Ace created instance (see [below](#ace-instance-direct-access)).\n\n## Working with ng-model\n\nThe ui-ace directive plays nicely with ng-model.\n\nThe ng-model will be watched for to set the Ace EditSession value (by [setValue](http://ajaxorg.github.io/ace/#nav=api&api=edit_session)).\n\n_The ui-ace directive stores and expects the model value to be a standard javascript String._\n\n## Ace instance direct access\n\nFor more interaction with the Ace instance in the directive, we provide a direct access to it.\nUsing\n\n```html\n<div ui-ace scope-instance=\"foo\" ></div>\n```\n\n you will have in `$scope.foo` the [Ace Editor instance](http://ajaxorg.github.io/ace/#nav=api&api=editor)\n\n```javascript\nmyAppModule.controller('MyController', [ '$scope', function($scope) {\n\n  // Editor part\n  var _editor = $scope.foo;\n  var _session = _editor.getSession();\n  var _renderer = _editor.renderer;\n\n  // Options\n  _editor.setReadOnly(true);\n  _session.setUndoManager(new UndoManager());\n  _renderer.setHighlightActiveLine(false);\n\n  // Events\n  _editor.on(\"changeSession\", function(){ ... });\n  _session.on(\"change\", function(){ ... });\n\n}]);\n```\n",
+  "readmeFilename": "README.md",
+  "_id": "angular-ui-ace@0.0.3",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/angular-ui/ui-ace.git"
+  }
+}

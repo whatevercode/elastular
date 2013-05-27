@@ -1,0 +1,100 @@
+<style>
+    .ace_editor {
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+
+    .ace_editor_wrapper {
+        position: relative;
+        height: 200px
+    }
+
+    #request .ace_editor_wrapper {
+        position: relative;
+        height: 500px;
+    }
+
+    #results .ace_editor_wrapper {
+        position: relative;
+        height: 500px;
+    }
+</style>
+
+<div class="well">
+    <h1>ELASTULAR</h1>
+    <input placeholder="elastic url" ng-model="url">
+</div>
+
+<div class="well">
+    <div class="row">
+
+        <div class="span8" id="request">
+            <h5>request</h5>
+
+            <div ui-ace="{
+                  theme:'github',
+                  mode: 'json'
+                }" ng-model="indicesJson">
+            </div>
+            <!--<div>-->
+            <!--<button class="btn" ng-click="execEjs('all')">execEjs</button>-->
+            <!--</div>-->
+        </div>
+        <div class="span6" id="results">
+            <h5>Results</h5>
+
+            <div ui-ace="{
+                theme:'github',
+                mode: 'json'
+                }" ng-model="statsJson">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="well">
+    <div class="row">
+
+
+        <div class="span4">
+            <h2>Indices</h2>
+
+            <ul>
+                <li ng-repeat="(key,val) in stats.metadata.indices" ng-click="showIndexInfo(key,val)">{{key}}</li>
+            </ul>
+            <button ng-click="getClusterStats()" class="btn">refresh</button>
+
+        </div>
+        <div class="span6">
+            <h2>Index info {{indexInfo.index}} {{indexInfo.data.state}}</h2>
+
+            <h3>Settings</h3>
+            <pre>{{ indexInfo.data.settings | json }}</pre>
+
+            <h3>Mappings/Fields</h3>
+            <ul>
+                <li ng-repeat="(key,val) in indexInfo.data.mappings">
+                    <p>{{key}}</p>
+                    <pre>
+                        {{val.properties|json}}
+                    </pre>
+                </li>
+            </ul>
+        </div>
+
+        <!--<div class="span12">-->
+        <!--<h2>Search</h2>-->
+        <!--<button class="btn" ng-click="doSearch()">search...</button>-->
+        <!--<div ng-click="addTypeFilter()" style="cursor: pointer;">addTypeFilter</div>-->
+
+        <!--<pre>{{request.toString()}}</pre>-->
+        <!--<h3>Results</h3>-->
+        <!--<pre>-->
+        <!--{{results|json}}-->
+        <!--</pre>-->
+        <!--</div>-->
+
+    </div>
+</div>
