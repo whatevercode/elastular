@@ -1,0 +1,123 @@
+<div class="well">
+    <!--<h1>Search</h1>-->
+    <!--<button class="btn" ng-click="doSearch()">search...</button>-->
+
+    <style>
+        .ace_editor { top: 0; bottom: 0; right: 0; left: 0; }
+        .ace_editor_wrapper { position : relative; height: 200px}
+        #request .ace_editor_wrapper { position : relative; height: 500px;}
+        #results .ace_editor_wrapper { position : relative; height: 500px;}
+    </style>
+
+    <input placeholder="elastic url" ng-model="url">
+
+
+
+    <div class="row">
+        <div class="span6">
+            <h5>query ejs</h5>
+            <div ui-ace="{
+                  theme:'github',
+                  mode: 'javascript'
+                }" ng-model="queryEjs">
+            </div>
+            <div ng-hide="queryErrors.length == 0">
+                <h6>errors!!</h6>
+                <pre >{{queryErrors|json}}</pre>
+
+            </div>
+            <!--<div>-->
+            <!--<h3>Query Info</h3>-->
+            <!--<pre>-->
+            <!--{{queryInfo|json}}-->
+            <!--</pre>-->
+            <!--</div>-->
+        </div>
+        <div class="span6">
+            <h5>filter ejs</h5>
+            <div ui-ace="{
+                  theme:'github',
+                  mode: 'javascript'
+                }" ng-model="filterEjs">
+            </div>
+            <div ng-hide="filterErrors.length ==0">
+                <h6>errors!!</h6>
+                <pre >{{filterErrors|json}}</pre>
+
+            </div>
+            <!--<div ui-ace="{-->
+            <!--theme:'github',-->
+            <!--mode: 'javascript'-->
+            <!--}" ng-model="filterStr">-->
+            <!--</div>-->
+        </div>
+
+        <div class="span6">
+            <h5>facet</h5>
+            <div ui-ace="{
+                  theme:'github',
+                  mode: 'javascript'
+                }" ng-model="facetEjs">
+            </div>
+            <button class="btn" ng-click="setFacet()">set facet</button>
+        </div>
+
+        <!--<div class="span12">-->
+        <!--<h5>RESULTS</h5>-->
+        <!--<div ui-ace="{-->
+        <!--theme:'github',-->
+        <!--mode: 'javascript'-->
+        <!--}" ng-model="bla"></div>-->
+        <!--</div>-->
+    </div>
+
+    <div class="row">
+
+        <div class="span6" id="request">
+            <h5>request</h5>
+            <div ui-ace="{
+                  theme:'github',
+                  mode: 'json'
+                }" ng-model="ejsRequestStr">
+            </div>
+            <!--<div>-->
+            <!--<button class="btn" ng-click="execEjs('all')">execEjs</button>-->
+            <!--</div>-->
+        </div>
+        <div class="span12" id="results">
+            <h5>Results</h5>
+            <div ui-ace="{
+                theme:'github',
+                mode: 'json'
+                }" ng-model="resultsJson">
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row">
+        <div class="span4">
+            <ul>
+                <li ng-repeat="(key,val) in ejs" ng-click="add(key,val)">{{key}} {{val|funcParams}}</li>
+            </ul>
+        </div>
+        <div class="span2">
+            <ul>
+                <li ng-repeat="(key,val) in request" ng-click="show(key,val)">{{key}}{{val}}</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <pre>{{request.toString()}}</pre>
+    <h3>Results</h3>
+    <ul>
+        <li ng-repeat="hit in results.hits.hits">{{hit._id}}</li>
+    </ul>
+        <pre >
+            <!--{{results|json}}-->
+        </pre>
+</div>

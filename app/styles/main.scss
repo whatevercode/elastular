@@ -1,0 +1,17 @@
+//@import "compass_twitter_bootstrap";
+@import "../components/sass-bootstrap/lib/bootstrap";
+body {
+  padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+//@import "compass_twitter_bootstrap_responsive";
+@import "roboto/robotoFont";
+
+h1, h2, h3, h4, h5, h6 {
+  //color: $tackl-blue;
+  font-family: 'RobotoThin';
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 36px;
+}
