@@ -5,11 +5,11 @@
     <ignored path="elastular.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="66c59ee4-aa99-4a66-a2f5-e086b5bfa6c0" time="1369614276229" ignored="false" />
-    <file path="/a.dummy" changelist="66c59ee4-aa99-4a66-a2f5-e086b5bfa6c0" time="1369611672482" ignored="false" />
+    <file path="/a.dummy" changelist="66c59ee4-aa99-4a66-a2f5-e086b5bfa6c0" time="1369614613623" ignored="false" />
     <file path="/index.html" changelist="66c59ee4-aa99-4a66-a2f5-e086b5bfa6c0" time="1369611687603" ignored="false" />
     <file path="/app.js" changelist="66c59ee4-aa99-4a66-a2f5-e086b5bfa6c0" time="1369611730340" ignored="false" />
     <file path="$PROJECT_DIR$/../esng/app/scripts/controllers/main.js" changelist="66c59ee4-aa99-4a66-a2f5-e086b5bfa6c0" time="1369611978001" ignored="false" />
-    <file path="/main.js" changelist="66c59ee4-aa99-4a66-a2f5-e086b5bfa6c0" time="1369613288770" ignored="false" />
+    <file path="/main.js" changelist="66c59ee4-aa99-4a66-a2f5-e086b5bfa6c0" time="1369614605846" ignored="false" />
     <file path="/search.js" changelist="66c59ee4-aa99-4a66-a2f5-e086b5bfa6c0" time="1369613030343" ignored="false" />
     <file path="/search.html" changelist="66c59ee4-aa99-4a66-a2f5-e086b5bfa6c0" time="1369612897506" ignored="false" />
     <file path="/main.html" changelist="66c59ee4-aa99-4a66-a2f5-e086b5bfa6c0" time="1369613475982" ignored="false" />
@@ -126,7 +126,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="47" selection-start="808" selection-end="811" vertical-scroll-proportion="0.40723982">
+            <state line="58" column="50" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.6660959">
               <folding />
             </state>
           </provider>
@@ -135,7 +135,7 @@
       <file leaf-file-name="search.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scripts/controllers/search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="49" selection-start="1096" selection-end="1133" vertical-scroll-proportion="0.0">
+            <state line="53" column="50" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -167,8 +167,8 @@
         <option value="$PROJECT_DIR$/app/views/search.html" />
         <option value="$PROJECT_DIR$/app/views/main.html" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
         <option value="$PROJECT_DIR$/app/scripts/controllers/search.js" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
       </list>
     </option>
   </component>
@@ -361,10 +361,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="31" width="1922" height="1053" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32967034" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24986821" sideWeight="0.6703297" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -375,7 +376,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32967034" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -529,13 +529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/search.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="49" selection-start="1096" selection-end="1133" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/search.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="18" selection-start="574" selection-end="718" vertical-scroll-proportion="-0.625">
@@ -543,9 +536,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="50" selection-start="1395" selection-end="1395" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="47" selection-start="808" selection-end="811" vertical-scroll-proportion="0.40723982">
+        <state line="58" column="50" selection-start="1685" selection-end="1685" vertical-scroll-proportion="0.6660959">
           <folding />
         </state>
       </provider>
