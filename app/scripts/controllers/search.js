@@ -34,7 +34,7 @@ angular.module('elastularApp')
 
 
 
-        $scope.url = '';
+        $scope.url = 'http://dev2.tackl.it:9200';
 
         $scope.connect = function(){
             console.log('connection...', $scope.url);
