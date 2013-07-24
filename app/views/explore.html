@@ -1,0 +1,60 @@
+<style>
+    .ace_editor { top: 0; bottom: 0; right: 0; left: 0; }
+    .ace_editor_wrapper { position : relative; height: 200px}
+    #request .ace_editor_wrapper { position : relative; height: 300px;}
+    #results .ace_editor_wrapper { position : relative; height: 500px;}
+</style>
+<h1>explore</h1>
+
+
+<div class="well">
+    <ul class="nav nav-pills">
+        <li ng-repeat="(key,val) in stats.data.metadata.indices" ng-class="{active: key==indexInfoKey}" >
+            <a ng-click="showIndexInfo(key,val)">{{key}}</a>
+        </li>
+    </ul>
+    <h4>{{ indexInfoKey }}  {{ type }}</h4>
+    <ul class="nav nav-pills">
+        <li ng-repeat="(key,val) in indexInfo.mappings" ng-class="{active: key==type}" >
+            <a ng-click="showTypeInfo(key,val)">{{key}}</a>
+        </li>
+    </ul>
+    <!--<ul class="nav nav-pills">-->
+        <!--<li ng-repeat="(key,val) in ejs" ng-click="add(key,val)">-->
+            <!--<a > {{key}} {{val|funcParams}}</a>-->
+        <!--</li>-->
+    <!--</ul>-->
+    </div>
+</div>
+
+<div class="row">
+    <div class="span12 well">
+        <h4>ejs syntax</h4>
+        <div ui-ace="{theme:'github',mode: 'json'}" ng-model="ejsJs"></div>
+    </div>
+    <div class="span8 well" id="request">
+        <h4>elastic syntax</h4>
+        <div ui-ace="{theme:'github',mode: 'json'}" ng-model="ejsStr"></div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span8 well">
+        <h2>results</h2>
+        <!--{{ result.hits.hits }}-->
+        <ul class="nav nav-list">
+            <li ng-repeat="hit in result.hits.hits" >
+                <a ng-click="showHit(hit)">{{ hit._index }} - {{ hit._type }} - {{ hit._id }} - {{ hit._score }}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="span12 well" id="results">
+        <div>{{ hitInfo._id }}</div>
+        <div ui-ace="{theme:'github',mode: 'json'}" ng-model="hitJson"></div>
+
+    </div>
+
+    <button class="btn btn-primary" ng-click="save(hitInfo,hitJson)">save</button>
+    <!--<button class="btn btn-warning" ng-click="save(hitInfo,hitJson)">delete</button>-->
+   <!--{{ stats.data.metadata.indices }}-->
+</div>
