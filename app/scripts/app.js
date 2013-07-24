@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('elastularApp', ['elasticjs.service','ui.ace'])
+angular.module('elastularApp', ['elasticjs.service','ui.ace','ngResource'])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
@@ -10,6 +10,10 @@ angular.module('elastularApp', ['elasticjs.service','ui.ace'])
             .when('/search', {
                 templateUrl: 'views/search.html',
                 controller: 'SearchCtrl'
+            })
+            .when('/explore', {
+                templateUrl: 'views/explore.html',
+                controller: 'ExploreCtrl'
             })
             .otherwise({
                 redirectTo: '/'

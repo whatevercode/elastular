@@ -42,9 +42,10 @@
                 <!--</div>-->
                 <ul class="nav">
                     <li>
-                        <a href="/#/search">search</a>
+                        <a href="#/search">search</a>
                     </li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="#explore">explore</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
@@ -53,6 +54,7 @@
 <div class="container-fluid" ng-view></div>
 
 <script type="text/javascript" src="components/ace-builds/src-min-noconflict/ace.js"></script>
+<script type="text/javascript" src="components/ace-builds/src-min-noconflict/mode-json.js"></script>
 
 <script src="components/angular/angular.js"></script>
 <!--<script src="components/angular-unstable/angular.js"></script>-->
@@ -70,7 +72,8 @@
 <script src="scripts/controllers/main.js"></script>
 <script src="scripts/controllers/search.js"></script>
 <script src="scripts/filters/funcParams.js"></script>
-<script src="scripts/controllers/explor.js"></script>
+<script src="scripts/controllers/explore.js"></script>
+<script src="scripts/services/explore.js"></script>
 <!-- endbuild -->
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
